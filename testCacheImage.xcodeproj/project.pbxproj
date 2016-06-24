@@ -15,6 +15,8 @@
 		20EEF4C91D1D20730059D034 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20EEF4C71D1D20730059D034 /* LaunchScreen.storyboard */; };
 		20EEF4D41D1D20730059D034 /* testCacheImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EEF4D31D1D20730059D034 /* testCacheImageTests.m */; };
 		20EEF4DF1D1D20730059D034 /* testCacheImageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EEF4DE1D1D20730059D034 /* testCacheImageUITests.m */; };
+		20EEF4EF1D1D20BD0059D034 /* ModelImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EEF4EE1D1D20BD0059D034 /* ModelImage.m */; };
+		20EEF4F31D1D21220059D034 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EEF4F21D1D21220059D034 /* ImageCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		20EEF4DA1D1D20730059D034 /* testCacheImageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testCacheImageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20EEF4DE1D1D20730059D034 /* testCacheImageUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testCacheImageUITests.m; sourceTree = "<group>"; };
 		20EEF4E01D1D20730059D034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20EEF4ED1D1D20BD0059D034 /* ModelImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelImage.h; sourceTree = "<group>"; };
+		20EEF4EE1D1D20BD0059D034 /* ModelImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelImage.m; sourceTree = "<group>"; };
+		20EEF4F11D1D21220059D034 /* ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
+		20EEF4F21D1D21220059D034 /* ImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,8 @@
 		20EEF4B81D1D20730059D034 /* testCacheImage */ = {
 			isa = PBXGroup;
 			children = (
+				20EEF4F01D1D20F30059D034 /* Cache */,
+				20EEF4EC1D1D207A0059D034 /* Model */,
 				20EEF4BC1D1D20730059D034 /* AppDelegate.h */,
 				20EEF4BD1D1D20730059D034 /* AppDelegate.m */,
 				20EEF4BF1D1D20730059D034 /* ViewController.h */,
@@ -138,6 +146,24 @@
 				20EEF4E01D1D20730059D034 /* Info.plist */,
 			);
 			path = testCacheImageUITests;
+			sourceTree = "<group>";
+		};
+		20EEF4EC1D1D207A0059D034 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				20EEF4ED1D1D20BD0059D034 /* ModelImage.h */,
+				20EEF4EE1D1D20BD0059D034 /* ModelImage.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		20EEF4F01D1D20F30059D034 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				20EEF4F11D1D21220059D034 /* ImageCache.h */,
+				20EEF4F21D1D21220059D034 /* ImageCache.m */,
+			);
+			name = Cache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +298,9 @@
 			files = (
 				20EEF4C11D1D20730059D034 /* ViewController.m in Sources */,
 				20EEF4BE1D1D20730059D034 /* AppDelegate.m in Sources */,
+				20EEF4F31D1D21220059D034 /* ImageCache.m in Sources */,
 				20EEF4BB1D1D20730059D034 /* main.m in Sources */,
+				20EEF4EF1D1D20BD0059D034 /* ModelImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = testCacheImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Evan.testCacheImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,6 +456,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = testCacheImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Evan.testCacheImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
